@@ -28,6 +28,18 @@ export default function Page() {
         <div className="text-muted-foreground font-semibold">
           경품을 수령할 주소를 입력해주세요
         </div>
+        <div className="w-full flex  gap-2">
+          <Input
+            placeholder="주소를 입력해주세요"
+            type="text"
+            className="h-10 w-[77.5%] "
+            onChange={(e) => setIsFormValid(e.target.value.length > 3)}
+          />
+          <button className="bg-[#F5F5F5] text-[#ADADAD] px-2 rounded-md text-sm">
+            주소 찾기
+          </button>
+        </div>
+
         <div className="w-full flex flex-col gap-4">
           <Input
             placeholder="주소를 입력해주세요"

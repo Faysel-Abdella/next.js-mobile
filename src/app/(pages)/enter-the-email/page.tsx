@@ -24,6 +24,7 @@ export default function Page() {
         </div>
         <Separator />
       </nav>
+
       <div className="w-full h-full pt-4 px-4 space-y-4">
         <div className="text-muted-foreground font-semibold">
           아이디로 사용할 이메일을 입력해 주세요
