@@ -52,8 +52,26 @@ const pageLinks = [
     { name: "feed-1", path: "/feed-1" },
     { name: "feed-2", path: "/feed-2" },
     { name: "feed-3", path: "/feed-3" },
+    { name: "my-page", path: "/my-page" },
+    { name: "point-history-1", path: "/point-history-1" },
+    { name: "point-history-2", path: "/point-history-2" },
+    { name: "point-conversion", path: "/point-conversion" },
+    { name: "point-conversion-completed", path: "/point-conversion-completed" },
+    { name: "no-ticket-history", path: "/no-ticket-history" },
+    { name: "ticket-history-available", path: "/ticket-history-available" },
+    { name: "insurance-management-unavailable", path: "/insurance-management-unavailable" },
+    { name: "insurance-management-available", path: "/insurance-management-available" },
+    { name: "insurance-details", path: "/insurance-details" },
+    { name: "notification-settings", path: "/notification-settings" },
+    { name: "notices", path: "/notices" },
+    { name: "notice-details", path: "/notice-details" },
+    { name: "faq", path: "/faq" },
+    { name: "inquiry-not-found", path: "/inquiry-not-found" },
+    { name: "inquiry-records", path: "/inquiry-records" },
+    { name: "contact-us-2", path: "/contact-us-2" },
+    { name: "response-pending-details", path: "/response-pending-details" },
+    { name: "response-completed-details", path: "/response-completed-details" },
 ]
-
 
 
 export default function DesktopLayout() {
