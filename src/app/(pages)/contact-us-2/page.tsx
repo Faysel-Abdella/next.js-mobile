@@ -56,7 +56,7 @@ export default function Page() {
   const [formValues, setFormValues] = useState<z.infer<typeof formSchema> | null>(null);
 
 
-  function onSubmit(values: any) { // Replace any with the actual type from zod schema
+  function onSubmit(values: z.infer<typeof formSchema>) { 
     setFormValues(values);
     setIsDialogOpen(true);
     console.log(values);
@@ -160,7 +160,9 @@ export default function Page() {
                     </div>
                     {imagePreviews.map((preview, index) => (
                       <div key={index} className="relative w-[72px] h-[72px] mx-1">
-                        <img
+                        <Image
+                          width={100}
+                          height={100}
                           src={preview}
                           alt={`Preview ${index + 1}`}
                           className="w-full h-full object-contain rounded-lg bg-[#FFE9E9]"
