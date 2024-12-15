@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -45,9 +46,9 @@ export default function Page() {
               >
                 <p>항목1</p>
                 {answer[0] === "A" ? (
-                  <img src="/images/quiz.png" alt="" />
+                  <Image alt="img" width={10} height={10}  src="/images/quiz.png" />
                 ) : (
-                  <img src="/images/null.png" />
+                  <Image alt="img" width={10} height={10}  src="/images/null.png" />
                 )}
               </Button>
 
@@ -63,9 +64,9 @@ export default function Page() {
               >
                 <p>항목1</p>
                 {answer[0] === "B" ? (
-                  <img src="/images/quiz.png" alt="" />
+                  <Image alt="img" width={10} height={10}  src="/images/quiz.png" />
                 ) : (
-                  <img src="/images/null.png" />
+                  <Image alt="img" width={10} height={10}  src="/images/null.png" />
                 )}
               </Button>
               <Button
@@ -80,9 +81,9 @@ export default function Page() {
               >
                 <p>항목1</p>
                 {answer[0] === "C" ? (
-                  <img src="/images/quiz.png" alt="" />
+                  <Image alt="img" width={10} height={10}  src="/images/quiz.png" />
                 ) : (
-                  <img src="/images/null.png" />
+                  <Image alt="img" width={10} height={10}  src="/images/null.png" />
                 )}
               </Button>
               <Button
@@ -97,9 +98,9 @@ export default function Page() {
               >
                 <p>항목1</p>
                 {answer[0] === "D" ? (
-                  <img src="/images/quiz.png" alt="" />
+                  <Image alt="img" width={10} height={10}  src="/images/quiz.png" />
                 ) : (
-                  <img src="/images/null.png" />
+                  <Image alt="img" width={10} height={10}  src="/images/null.png" />
                 )}
               </Button>
             </div>

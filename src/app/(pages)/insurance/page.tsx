@@ -7,6 +7,7 @@ import {
 import { Icons } from "@/components/ui/icons";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
@@ -55,7 +56,7 @@ export default function Page() {
             <div className="text-[#ADADAD]">보험 가입 상태</div>
             <div className="text-muted-foreground flex items-center gap-1">
               신청 완료
-              <img src="/images/mark.png" />
+              <Image width={10} height={10} alt="img" src="/images/mark.png" />
             </div>
           </div>
           <div className="flex flex-col py-2 space-y-1">
