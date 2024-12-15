@@ -16,27 +16,56 @@ export default function Page() {
         <Separator />
       </nav>
       <div className="w-full h-full pt-2  space-y-4 flex flex-col text-[#4D4D4D]">
-          <div className="flex items-center justify-between px-5 py-4  border-b-[5px] border-[#F5F5F5]">
-
+        <div className="flex items-center justify-between px-5 py-4  border-b-[5px] border-[#F5F5F5]">
           <div className="flex gap-1 items-center text-md font-semibold">
-              {/* <span className="bg-red-500 rounded-full aspect-square p-1 h-6">P</span> */}
-              <Image
+            {/* <Image
                 alt="icon"
-                src="/images/star-mass.svg"
+                src="/images/rotated-star.svg"
                 width={20}
                 height={20}
                 className="w-6"
-              />
-              보유 응모권
-            </div>
-          <p className="font-semibold text-md">4장</p>
+              /> */}
+            보유 응모권
           </div>
-        <div className="flex pt-3 px-5">
-
-        <div className="flex w-full h-24 bg-[#FCC6C6] rounded-xl"></div>
+          <p className="font-semibold text-md">2장</p>
+        </div>
+        <div className="px-5 space-y-3">
+          <button className="w-full  flex items-center gap-3  border border-[#DCDCDC] rounded-[10px] p-4">
+            <Image
+              alt="icon"
+              src="/images/rotated-star.svg"
+              width={20}
+              height={20}
+              className="size-8"
+            />
+            <div>
+              <h3 className="font-medium text-base text-start text-[#4d4d4d]">
+                응모권
+              </h3>
+              <p className="font-light text-sm text-[#ADADAD]">
+                12월 10일 까지
+              </p>
+            </div>
+          </button>
+          <button className="w-full  flex items-center gap-3  border border-[#DCDCDC] rounded-[10px] p-4">
+            <Image
+              alt="icon"
+              src="/images/rotated-star.svg"
+              width={20}
+              height={20}
+              className="size-8"
+            />
+            <div>
+              <h3 className="font-medium text-base text-start text-[#4d4d4d]">
+                응모권
+              </h3>
+              <p className="font-light text-sm text-[#ADADAD]">
+                12월 10일 까지
+              </p>
+            </div>
+          </button>
         </div>
       </div>
-     
     </div>
   );
 }
