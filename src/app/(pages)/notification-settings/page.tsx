@@ -17,26 +17,25 @@ export default function Page() {
         <Separator />
       </nav>
       <div className="w-full h-full pt-5  space-y-4 flex flex-col text-[#4D4D4D]">
-      <div className='px-4 flex flex-col gap-5'>
-                        <div className='w-full flex justify-between'>
-                            <div className='text-muted-foreground text-sm'>이벤트 및 광고 수신 알림</div>
-                            <Switch className='data-[state=unchecked]:bg-[#ADADAD] data-[state=checked]:bg-primary' />
-                        </div>
-                        <Separator className="bg-[#F5F5F5]"/>
-                        <div className='w-full flex justify-between'>
-                            <div className='text-muted-foreground text-sm'>눈치게임 알림</div>
-                            <Switch className='data-[state=unchecked]:bg-[#ADADAD] data-[state=checked]:bg-primary' />
-                        </div>
-                        <Separator className="bg-[#F5F5F5]"/>
-                        <div className='w-full flex justify-between'>
-                            <div className='text-muted-foreground text-sm'>퀴즈 알림</div>
-                            <Switch className='data-[state=unchecked]:bg-[#ADADAD] data-[state=checked]:bg-primary' />
-                        </div>
-                    </div>
-        
-       
+        <div className="px-4 flex flex-col gap-5">
+          <div className="w-full flex justify-between">
+            <div className="text-muted-foreground text-sm">
+              이벤트 및 광고 수신 알림
+            </div>
+            <Switch className="data-[state=unchecked]:bg-[#ADADAD] data-[state=checked]:bg-primary" />
+          </div>
+          <Separator className="bg-[#F5F5F5]" />
+          <div className="w-full flex justify-between">
+            <div className="text-muted-foreground text-sm">눈치게임 알림</div>
+            <Switch className="data-[state=unchecked]:bg-[#ADADAD] data-[state=checked]:bg-primary" />
+          </div>
+          <Separator className="bg-[#F5F5F5]" />
+          <div className="w-full flex justify-between">
+            <div className="text-muted-foreground text-sm">퀴즈 알림</div>
+            <Switch className="data-[state=unchecked]:bg-[#ADADAD] data-[state=checked]:bg-primary" />
+          </div>
+        </div>
       </div>
-     
     </div>
   );
 }

@@ -61,7 +61,7 @@ export default function Page() {
 
   const [imagePreviews, setImagePreviews] = useState<string[]>([]);
 
-  const isFormValid = form.formState.isValid && imagePreviews.length > 0;
+  const isFormValid = form.formState.isValid;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [formValues, setFormValues] = useState<z.infer<typeof formSchema> | null>(null);
 
@@ -114,7 +114,7 @@ export default function Page() {
             name="title"
             render={({ field }) => (
               <FormItem className="gap-2.5">
-                <FormLabel>제목</FormLabel>
+                <FormLabel className="text-[#4D4D4D]">제목</FormLabel>
                 <FormControl>
                   <Input 
                     placeholder="제목을 입력해 주세요" 
@@ -131,7 +131,7 @@ export default function Page() {
             name="content"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>문의 내용</FormLabel>
+                <FormLabel className="text-[#4D4D4D]">문의 내용</FormLabel>
                 <FormControl>
                   <Textarea 
                     placeholder="내용을 입력해 주세요" 
@@ -167,7 +167,6 @@ export default function Page() {
                         <span className="mt-1 text-sm text-gray-500">사진</span>
                       </label>
                     </div>
-
                     {imagePreviews.map((preview, index) => (
                       <div key={index} className="relative w-[72px] h-[72px] mx-1">
                         <img
@@ -197,7 +196,7 @@ export default function Page() {
             type="submit" 
             className={cn(
               "w-full h-11 text-base",
-              isFormValid ? "bg-primary hover:bg-primary/90" : "bg-[#ADADAD]"
+              isFormValid ? "bg-primary" : "disabled:opacity-100 bg-[#ADADAD]"
             )}
           >
             완료

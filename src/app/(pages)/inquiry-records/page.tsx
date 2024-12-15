@@ -39,7 +39,7 @@ export default function Page() {
           답변 완료
             </span>
             문의3 제목 텍스트 텍스트</p>
-          <p className=" text-[#ADADAD] text-[13px]">2024.11.20</p>
+          <p className=" text-[#ADADAD] text-[13px]">2024.10.20</p>
         </div>
 
         <Separator className="bg-[#F5F5F5]"/>
@@ -50,10 +50,8 @@ export default function Page() {
           답변 완료
             </span>
             문의3 제목 텍스트 텍스트</p>
-          <p className=" text-[#ADADAD] text-[13px]">2024.11.01</p>
+          <p className=" text-[#ADADAD] text-[13px]">2024.10.01</p>
         </div>
-
-
       </div>
        
       </div>

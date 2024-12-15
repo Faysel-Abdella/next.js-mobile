@@ -24,7 +24,7 @@ export default function Page() {
             <p className="text-[10px] bg-[#3B90F4]/10 text-[#3B90F4] w-fit p-1 px-1.5">
               신청 완료
             </p>
-            <p className="text-[13px]">홍길동(01011112222)</p>
+            <p className="text-[13px] text-[#ADADAD]">홍길동(01011112222)</p>
           </div>
         </div>
 
@@ -33,10 +33,10 @@ export default function Page() {
           <div className="flex h-full aspect-square rounded-lg bg-[#FFE9E9]"></div>
           <div className="flex flex-col gap-1 py-2">
             <p className="text-md font-light">교보용종케어보험(무배당)</p>
-            <p className="text-[10px] bg-[##8268FD]/10 text-[##8268FD] w-fit p-1 px-1.5">
+            <p className="text-[10px] bg-[#8268FD]/10 text-[#8268FD] w-fit p-1 px-1.5">
               신청 완료
             </p>
-            <p className="text-[13px]">홍길동(01011112222)</p>
+            <p className="text-[13px] text-[#ADADAD]">홍길동(01011112222)</p>
           </div>
         </div>
 
@@ -46,10 +46,10 @@ export default function Page() {
           <div className="flex h-full aspect-square rounded-lg bg-[#FFE9E9]"></div>
           <div className="flex flex-col gap-1 py-2">
             <p className="text-md font-light">교보용종케어보험(무배당)</p>
-            <p className="text-[10px] bg-[##ADADAD]/10 text-[##ADADAD] w-fit p-1 px-1.5">
+            <p className="text-[10px] bg-[#ADADAD]/10 text-[#ADADAD] w-fit p-1 px-1.5">
               신청 완료
             </p>
-            <p className="text-[13px]">홍길동(01011112222)</p>
+            <p className="text-[13px] text-[#ADADAD]">홍길동(01011112222)</p>
           </div>
         </div>
 

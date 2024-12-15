@@ -25,19 +25,19 @@ export default function Page() {
         <div className="flex flex-col gap-4 p-4 rounded-xl bg-[#F5F5F5]">
           <div className="flex w-full justify-between">
             <p className="font-light">전환된 네이버 아이디</p>
-            <p className="text-end">aaa123</p>
+            <p className="text-end font-medium">aaa123</p>
 
           </div>
 
           <div className="flex w-full justify-between">
             <p className="font-light">전환 포인트</p>
-            <p className="text-end text-primary">1,000 P</p>
+            <p className="text-end font-medium text-primary">1,000 P</p>
 
           </div>
 
           <div className="flex w-full justify-between">
             <p className="font-light">잔여 포인트</p>
-            <p className="text-end">11,000 P</p>
+            <p className="text-end font-medium">11,000 P</p>
 
           </div>
         </div>
