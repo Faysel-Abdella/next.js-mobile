@@ -84,7 +84,7 @@ export default function Page() {
     ]
     return (
         <div className='relative py-6 flex flex-col justify-start items-center h-full'>
-            <nav className='w-full flex flex-col gap-4 pb-4'>
+            <nav className='w-full flex flex-col gap-4 pb-4 border-b-2'>
                 <div className='w-full px-4 mx-auto flex justify-between items-center '>
                     <Link href={".."} className='flex items-center gap-4'>
                         <Icons.arrowLeft className='size-5' />
@@ -95,7 +95,7 @@ export default function Page() {
                 </div>
             </nav>
             <ScrollArea className='h-full'>
-                <Carousel className="w-full bg-[#E2E2E2]">
+                {/* <Carousel className="w-full bg-[#E2E2E2]">
                     <CarouselContent className='bg-[#E2E2E2] '>
                         {Array.from({ length: 6 }).map((_, index) => (
                             <CarouselItem key={index} className='relative'>
@@ -106,8 +106,40 @@ export default function Page() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                </Carousel>
-                <div className='w-full pt-4 space-y-4 gap-2'>
+                </Carousel> */}
+                <div className='bg-[#F5F5F5] w-full flex justify-center items-center aspect-video'>
+                                    <Image src={'/images/blome.png'} width={150} height={100} alt='product-thumbnail' className='mt-5' />
+                                </div>
+                
+                <div className="flex flex-col items-start gap-2.5 p-5">
+                    <div className="flex items-center gap-2 w-full text-[10px] font-light">
+                      <p className=" bg-[#3B90F4]/10 text-[#3B90F4] w-fit py-0.5 px-1 rounded-md">
+                      참여 가능
+                      </p>
+                      <span className=" text-muted-foreground">
+                      41,533명이 참여했어요 
+                      </span>
+                    </div>
+
+                    <div className="flex flex-col gap-2">
+                      <p className="font-medium">브리지스톤 B2 드라이버</p>
+                      <span className="text-[#8268FD] font-light text-[13px]">
+                        정상가 1,066,660원
+                      </span>
+                    </div>
+
+                    <div className="flex border-t justify-between w-full py-2">
+                      <p className="font-light text-[13px] text[#ADADAD]">
+                        응모 가능 가격
+                      </p>
+                      <p className="font-medium text[#4D4D4D]">
+                        40,000 ~ 90,000 원
+                      </p>
+                    </div>
+
+                   
+                  </div>
+                {/* <div className='w-full pt-4 space-y-4 gap-2'>
                     <div className='flex flex-col px-4 w-full'>
                         <div className='text-xl'>브리지스톤 B2드라이버</div>
                         <div className='text-primary text-sm line-through'>정상가1,066,660 원</div>
@@ -165,8 +197,8 @@ export default function Page() {
                             1,250명 참여
                         </div>
                     </div>
-                </div>
-                <div className='w-full py-2'>
+                </div> */}
+                {/* <div className='w-full py-2'>
                     <Separator className='h-1' />
                     <div className='h-fit flex flex-col w-full'>
                         <Button variant={'ghost'} className='w-full py-6 justify-between'>
@@ -175,7 +207,7 @@ export default function Page() {
                         </Button>
                     </div>
                     <Separator className='h-1' />
-                </div>
+                </div> */}
                 <Image src={'/images/product-bill.png'} width={400} height={1200} alt='product-thumbnail' className='object-cover w-full' />
             </ScrollArea>
             <Drawer>

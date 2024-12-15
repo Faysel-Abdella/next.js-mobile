@@ -24,29 +24,30 @@ export default function Page() {
             <div className="flex justify-between items-center">
               <p className="font-light text-md text-[#4D4D4D]">보유 포인트</p>
 
-              <p className="font-semibold text-md ">+ 1000 P</p>
+              <p className="font-medium text-md ">+ 1000 P</p>
             </div>
             <div className="flex justify-between items-center">
               <p className="font-light text-md text-[#4D4D4D]">
                 전환 가능 포인트
               </p>
 
-              <p className="">+ 1000 P</p>
+              <p className="font-medium text-md text-primary">+ 1000 P</p>
             </div>
           </div>
           <div className="전액 사용-semibold text-md   flex-col gap-12">
           <p className="">전환할 포인트</p>
-          <div className="flex gap-4 my-2 text-primary">
+          <div className="flex gap-3 my-2 text-primary">
             <Input />
-            <Button className="bg-primary/10 border-none" variant={"outline"}>
+            <Button className="bg-primary/10 border-none w-fit px-2" variant={"outline"}>
             전액 사용
             </Button>
           </div>
 
 
           </div>
-          <div className="전액 사용-semibold text-md flex-col gap-1">
+          <div className="flex font-medium text-md flex-col gap-2">
           <p className="">전환할 네이버 아이디</p>
+          <p className="">aaa123</p>
           </div>
         </div>
 

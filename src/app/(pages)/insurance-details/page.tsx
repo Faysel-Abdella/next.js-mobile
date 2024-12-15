@@ -7,7 +7,6 @@ import {
   AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
-  AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
@@ -48,7 +47,7 @@ export default function Page() {
 
 
         <div className="flex flex-col gap-1.5">
-          <p className=" text-[#ADADAD] text-[13px]">보험 가입 상태 <span className="rounded-full border px-1 font-semibold border-black/40 ml-1">?</span></p>
+          <div className="flex items-center gap-1"><p className=" text-[#ADADAD] text-[13px]">보험 가입 상태 </p><Image src={"/images/question-mark.svg"} width={20} height={20} alt="icon" className="size-3.5" /></div>
           <p className="text-md ">신청 완료</p>
         </div>
 
@@ -61,16 +60,16 @@ export default function Page() {
       <div className="flex h-full items-end w-full justify-center text-[#3B90F4]">
       <AlertDialog >
       <AlertDialogTrigger asChild>
-        <Link href={""}>가입 취소</Link>
+        <Link href={""} className="border-b border-[#3B90F4]">가입 취소</Link>
       </AlertDialogTrigger>
-      <AlertDialogContent className="max-w-xs justify-center items-center">
+      <AlertDialogContent className="max-w-xs items-center">
         <AlertDialogHeader className="flex justify-center gap-2">
           <Image src={'/images/exclamation-mark.svg'} alt="point-history" width={200} height={200} className="size-12 self-center"/>
-          <AlertDialogTitle className="py-3">보험 가입이 취소됩니다</AlertDialogTitle>
+          <AlertDialogTitle className="py-3 text-center font-medium tex-md">보험 가입이 취소됩니다</AlertDialogTitle>
         </AlertDialogHeader>
         <AlertDialogFooter className="gap-2">
-          <AlertDialogCancel className="bg-primary/10 text-primary w-full">취소</AlertDialogCancel>
-          <AlertDialogAction className="w-full">확인</AlertDialogAction>
+          <AlertDialogCancel className="bg-primary/10 text-primary w-full font-medium">취소</AlertDialogCancel>
+          <AlertDialogAction className="w-full font-medium">확인</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
     </AlertDialog>
