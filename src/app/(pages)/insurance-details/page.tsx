@@ -13,6 +13,8 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button";
+import { CustomAlert, CustomAlertTrigger, CustomAlertContent, CustomAlertAction, CustomAlertCancel } from '@/components/custom-alert'
+
 
 export default function Page() {
   return (
@@ -58,7 +60,22 @@ export default function Page() {
         </div>
       </div>
       <div className="flex h-full items-end w-full justify-center text-[#3B90F4]">
-      <AlertDialog >
+     
+      <CustomAlert >
+          <CustomAlertTrigger asChild>
+            <Link href="" className="border-b border-[#3B90F4]">가입 취소</Link>
+          </CustomAlertTrigger>
+          <CustomAlertContent className="max-w-xs  flex flex-col justify-center gap-7 items-center w-full">
+          <Image src={'/images/exclamation-mark.svg'} alt="point-history" width={200} height={200} className="size-12 self-center"/>
+            <p className="text-center  text-black">보험 가입이 취소됩니다</p>
+            <div className="flex justify-center space-x-2.5 w-full">
+              <CustomAlertCancel className="bg-primary/10 text-primary w-full font-medium">취소</CustomAlertCancel>
+              <CustomAlertAction className="w-full bg-primary text-white font-medium">확인</CustomAlertAction>
+            </div>
+          </CustomAlertContent>
+        </CustomAlert>
+     
+      {/* <AlertDialog >
       <AlertDialogTrigger asChild>
         <Link href={""} className="border-b border-[#3B90F4]">가입 취소</Link>
       </AlertDialogTrigger>
@@ -72,9 +89,10 @@ export default function Page() {
           <AlertDialogAction className="w-full font-medium">확인</AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
-    </AlertDialog>
+    </AlertDialog> */}
         {/* <Link href={""} className="text-md">가입 취소</Link> */}
       </div>
     </div>
   );
 }
+

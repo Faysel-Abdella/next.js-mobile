@@ -17,6 +17,7 @@
 /.next/
 /out/
 
+/src/app/lab/page.tsx
 # production
 /build
 

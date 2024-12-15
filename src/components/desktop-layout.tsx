@@ -23,6 +23,7 @@ const pageLinks = [
     { name: "enter-address", path: "/enter-address" },
     { name: "purchase-1", path: "/purchase-1" },
     { name: "purchase-2", path: "/purchase-2" },
+    { name: "purchase-3", path: "/purchase-3" },
     { name: "payment-successful", path: "/payment-successful" },
     { name: "no-registered-receipt", path: "/no-registered-receipt" },
     { name: "receipt-registration-check", path: "/receipt-registration-check" },
@@ -71,6 +72,7 @@ const pageLinks = [
     { name: "contact-us-2", path: "/contact-us-2" },
     { name: "response-pending-details", path: "/response-pending-details" },
     { name: "response-completed-details", path: "/response-completed-details" },
+    { name: "lab", path: "/lab" },
 ]
 
 

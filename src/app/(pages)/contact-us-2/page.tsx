@@ -24,17 +24,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
+import { CustomAlert, CustomAlertTrigger, CustomAlertContent, CustomAlertAction, CustomAlertCancel } from '@/components/custom-alert'
 
 
 const formSchema = z.object({
@@ -66,7 +56,7 @@ export default function Page() {
   const [formValues, setFormValues] = useState<z.infer<typeof formSchema> | null>(null);
 
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: any) { // Replace any with the actual type from zod schema
     setFormValues(values);
     setIsDialogOpen(true);
     console.log(values);
@@ -94,9 +84,10 @@ export default function Page() {
   }
 
   return (
-    <div className="bg-white relative py-6 flex flex-col justify-between items-center h-full text-[#4D4D4D]">
+    <div className="bg-white relative -mt-5">
+    <div className="flex flex-col justify-between items-center text-[#4D4D4D]">
       <nav className="w-full flex flex-col gap-4">
-        <div className="w-full px-4 mx-auto flex justify-between items-center ">
+        <div className="w-full pt-10 px-4 mx-auto flex justify-between items-center ">
           <Link href={".."} className="flex items-center gap-4">
             <Icons.arrowLeft className="size-5" />
             <span className="text-lg">문의하기</span>
@@ -204,19 +195,19 @@ export default function Page() {
         </form>
       </Form>
 
-      <AlertDialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <AlertDialogContent className=" max-w-xs items-center">
-          <AlertDialogHeader className="flex justify-center gap-2 w-full">
-            <Image src={'/images/success-icon.svg'} alt="point-history" width={200} height={200} className="size-12 self-center"/>
-            <AlertDialogTitle className="py-1.5 text-md text-center font-medium">등록이 완료 되었어요.</AlertDialogTitle>
-          </AlertDialogHeader >
-          <AlertDialogFooter className="gap-2 content-stretch min-w-full">
-            <AlertDialogAction className="w-full bg-primary" onClick={() => setIsDialogOpen(false)}>확인</AlertDialogAction>
-          </AlertDialogFooter>
-        </AlertDialogContent>
-      </AlertDialog>
+
+      <CustomAlert open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <CustomAlertContent className="max-w-xs flex flex-col justify-center gap-7 items-center w-full">
+          <Image src='/images/success-icon.svg' alt="success" width={48} height={48} className="size-12 self-center"/>
+          <p className="text-center text-black">등록이 완료 되었어요.</p>
+          <div className="flex justify-center space-x-2.5 w-full">
+            <CustomAlertAction className="w-full bg-primary text-white font-medium">확인</CustomAlertAction>
+          </div>
+        </CustomAlertContent>
+      </CustomAlert>
         
       </div>
+    </div>
     </div>
   );
 }
