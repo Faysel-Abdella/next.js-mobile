@@ -88,7 +88,7 @@ export default function Page() {
               <span className="hidden"></span>
             </CustomAlertTrigger>
             <CustomAlertContent className="max-w-xs flex flex-col justify-center gap-7 items-center w-full">
-              <p className="text-center text-black">새로운 알림: 연동 성공!</p>
+              {/* <p className="text-center text-black">새로운 알림: 연동 성공!</p> */}
               <div className="flex mt-3 justify-center space-x-2.5 w-full">
                 <CustomAlertCancel
                   // onClick={() => setSelectedAlert("main")}
