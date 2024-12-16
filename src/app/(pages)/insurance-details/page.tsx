@@ -1,25 +1,20 @@
+"use client"
+
 import { Icons } from "@/components/ui/icons";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
 import { Button } from "@/components/ui/button";
-import { CustomAlert, CustomAlertTrigger, CustomAlertContent, CustomAlertAction, CustomAlertCancel } from '@/components/custom-alert'
+import { CustomAlert, CustomAlertTrigger, CustomAlertContent, CustomAlertAction, useAlert } from '@/components/custom-alert'
+import { useState } from "react";
+import { X } from "lucide-react";
 
 
 export default function Page() {
   return (
-    <div className="bg-white relative py-6 flex flex-col   h-full">
-      <nav className="w-full flex flex-col gap-4">
+    <div className="bg-white relative py-6 flex flex-col   h-screen">
+    <CustomAlert>
+     <nav className="w-full flex flex-col gap-4">
         <div className="w-full px-4 mx-auto flex flex-col ">
           <Link href={".."} className="flex items-center gap-4">
             <Icons.arrowLeft className="size-5" />
@@ -53,15 +48,52 @@ export default function Page() {
           <p className="text-md ">신청 완료</p>
         </div>
 
+        
 
         <div className="flex flex-col gap-1.5">
           <p className=" text-[#ADADAD] text-[13px]">보험만기일(청약철회일)</p>
           <p className="text-md ">2029-01-01</p>
         </div>
       </div>
-      <div className="flex h-full items-end w-full justify-center text-[#3B90F4]">
-     
-      <CustomAlert >
+      <div className="absolute mx-auto px-28 py-4 w-full justify-center  bottom-0">
+      <CustomAlertTrigger asChild alertId="first-alert">
+        <Button className="flex w-full outline-0 shadow-none underline h-fit bg-transparent text-center text-blue-500">
+      소셜 계정 연동
+        </Button>
+      {/* <p className="text-md px-5 text-[#209bff] w-full text-center"></p> */}
+        </CustomAlertTrigger>
+      </div>
+   
+      <FirstAlert />
+    </CustomAlert>
+
+    </div>
+  );
+}
+
+
+function FirstAlert() {
+  const { openAlert } = useAlert()
+  return (
+       <CustomAlertContent alertId="first-alert" className="max-w-xs  flex flex-col justify-center gap-7 items-center w-full">
+          <Image src={'/images/exclamation-mark.svg'} alt="point-history" width={200} height={200} className="size-12 self-center"/>
+            <p className="text-center  text-black">보험 가입이 취소됩니다</p>
+            <div className="flex justify-center space-x-2.5 w-full">
+              <CustomAlertAction className="bg-primary/10 text-primary w-full font-medium">취소</CustomAlertAction>
+              <CustomAlertAction className="w-full bg-primary text-white font-medium">확인</CustomAlertAction>
+            </div>
+        </CustomAlertContent>
+  )
+}
+
+
+
+
+
+
+
+
+{/* <CustomAlert >
           <CustomAlertTrigger asChild>
             <Link href="" className="border-b border-[#3B90F4]">가입 취소</Link>
           </CustomAlertTrigger>
@@ -69,30 +101,8 @@ export default function Page() {
           <Image src={'/images/exclamation-mark.svg'} alt="point-history" width={200} height={200} className="size-12 self-center"/>
             <p className="text-center  text-black">보험 가입이 취소됩니다</p>
             <div className="flex justify-center space-x-2.5 w-full">
-              <CustomAlertCancel className="bg-primary/10 text-primary w-full font-medium">취소</CustomAlertCancel>
+              <CustomAlertAction className="bg-primary/10 text-primary w-full font-medium">취소</CustomAlertAction>
               <CustomAlertAction className="w-full bg-primary text-white font-medium">확인</CustomAlertAction>
             </div>
           </CustomAlertContent>
-        </CustomAlert>
-     
-      {/* <AlertDialog >
-      <AlertDialogTrigger asChild>
-        <Link href={""} className="border-b border-[#3B90F4]">가입 취소</Link>
-      </AlertDialogTrigger>
-      <AlertDialogContent className="max-w-xs items-center">
-        <AlertDialogHeader className="flex justify-center gap-2">
-          <Image src={'/images/exclamation-mark.svg'} alt="point-history" width={200} height={200} className="size-12 self-center"/>
-          <AlertDialogTitle className="py-3 text-center font-medium tex-md">보험 가입이 취소됩니다</AlertDialogTitle>
-        </AlertDialogHeader>
-        <AlertDialogFooter className="gap-2">
-          <AlertDialogCancel className="bg-primary/10 text-primary w-full font-medium">취소</AlertDialogCancel>
-          <AlertDialogAction className="w-full font-medium">확인</AlertDialogAction>
-        </AlertDialogFooter>
-      </AlertDialogContent>
-    </AlertDialog> */}
-        {/* <Link href={""} className="text-md">가입 취소</Link> */}
-      </div>
-    </div>
-  );
-}
-
+        </CustomAlert> */}
