@@ -19,7 +19,8 @@ export default function Page() {
     isTitleValid && isContentValid ? "bg-[#FF5E18]" : "bg-[#ADADAD]";
 
   return (
-    <div className="relative flex flex-col">
+    <ScrollArea className="relative flex flex-col h-screen">
+    
       <nav className="w-full flex flex-col gap-4 py-4">
         <div className="w-full px-4 mx-auto flex justify-between items-center ">
           <Link href={".."} className="flex items-center gap-4">
@@ -28,6 +29,7 @@ export default function Page() {
           </Link>
         </div>
       </nav>
+
       <div className="w-full h-full pt-2 px-4 mt-4 space-y-4">
         <Tabs defaultValue="tab1" className="h-full">
           <TabsList className="w-full bg-transparent mx-4 p-0 gap-2">
@@ -222,11 +224,14 @@ export default function Page() {
           </ScrollArea>
         </Tabs>
       </div>
+
       <div className="w-full px-4 pt-2">
         <Button className={`w-full py-6 rounded-2xl ${background}`}>
           완료
         </Button>
       </div>
-    </div>
+      <ScrollBar />
+      </ScrollArea>
+
   );
 }

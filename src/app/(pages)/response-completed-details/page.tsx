@@ -1,4 +1,5 @@
 import { Icons } from "@/components/ui/icons";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,6 +16,8 @@ export default function Page() {
         </div>
         <Separator />
       </nav>
+      <ScrollArea>
+        
       <div className="w-full h-full  space-y-4 flex flex-col text-[#4D4D4D]">
         <div className="flex flex-col gap-5 p-5 text-[#4D4D4D] font-light">
           <div className="flex flex-col gap-1">
@@ -56,6 +59,8 @@ export default function Page() {
           </div>
         </div>
       </div>
+      </ScrollArea>
+
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import { Button } from '@/components/ui/button'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import Image from 'next/image'
 
 export default function Page() {
     return (
-        <div className='h-screen flex flex-col gap-1 justify-center items-center p-4'>
+        <ScrollArea className='h-screen relative flex flex-col gap-1 justify-center items-center p-4'>
                 <div className='w-full flex relative flex-col justify-center items-center'>
                 <p className="font-semibold absolute  top-1 ">gif 움직이는 이미지</p>
                     <Image src={'/images/moving.png'} width={183} height={145} alt='logo2' className='w-full' />
@@ -27,8 +28,9 @@ export default function Page() {
                 <Button className='w-full py-6 rounded-[6px] font-medium text-white'>
                     눈치게임 시작하기  {'>'}
                 </Button>
-                <span className='bottom-0 absolute top-full mt-6 text-blue-500 text-sm'>응모권이 없으시다면 클릭</span>
+                <span className='2xl:hidden bottom-0 absolute top-full mt-6 text-blue-500 text-sm'>응모권이 없으시다면 클릭</span>
             </div>
-        </div>
+                <span className='min-w-full hidden 2xl:block text-center pr-8 absolute bottom-8 mt-6 text-blue-500 text-sm'>응모권이 없으시다면 클릭</span>
+        </ScrollArea>
     )
 }

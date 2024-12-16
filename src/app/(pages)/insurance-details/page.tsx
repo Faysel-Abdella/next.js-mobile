@@ -8,12 +8,15 @@ import { Button } from "@/components/ui/button";
 import { CustomAlert, CustomAlertTrigger, CustomAlertContent, CustomAlertAction, useAlert } from '@/components/custom-alert'
 import { useState } from "react";
 import { X } from "lucide-react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 
 export default function Page() {
   return (
-    <div className="bg-white relative py-6 flex flex-col   h-screen">
+    <div className="bg-white relative  flex flex-col   h-screen">
     <CustomAlert>
+     <ScrollArea className="py-6">
+
      <nav className="w-full flex flex-col gap-4">
         <div className="w-full px-4 mx-auto flex flex-col ">
           <Link href={".."} className="flex items-center gap-4">
@@ -55,16 +58,24 @@ export default function Page() {
           <p className="text-md ">2029-01-01</p>
         </div>
       </div>
-      <div className="absolute mx-auto px-28 py-4 w-full justify-center  bottom-0">
+      <div className=" 2xl:hidden mx-auto px-28 w-full justify-center  bottom-0">
       <CustomAlertTrigger asChild alertId="first-alert">
         <Button className="flex w-full outline-0 shadow-none underline h-fit bg-transparent text-center text-blue-500">
       소셜 계정 연동
         </Button>
-      {/* <p className="text-md px-5 text-[#209bff] w-full text-center"></p> */}
+        </CustomAlertTrigger>
+      </div>
+
+      <div className="absolute hidden 2xl:block mx-auto px-28 py-4 w-full justify-center  bottom-0">
+      <CustomAlertTrigger asChild alertId="first-alert">
+        <Button className="flex w-full outline-0 shadow-none underline h-fit bg-transparent text-center text-blue-500">
+      소셜 계정 연동
+        </Button>
         </CustomAlertTrigger>
       </div>
    
       <FirstAlert />
+     </ScrollArea>
     </CustomAlert>
 
     </div>

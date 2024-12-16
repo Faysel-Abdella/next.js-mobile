@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="relative flex flex-col h-screen justify-between  ">
+    <ScrollArea className="relative flex flex-col h-screen justify-between  ">
       <nav className="w-full flex flex-col gap-4 py-3">
         <div className="w-full px-4 mx-auto flex justify-between items-center ">
           <Link href={".."} className="flex items-center gap-4">
@@ -57,7 +57,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="h-full flex flex-col justify-center items-center text-center space-y-4">
+      <div className="h-full flex flex-col justify-center items-center text-center space-y-4 py-8 px-4">
         <div className="text-muted-foreground/60 max-w-[200px]">
           데일리밥 입금 계좌
         </div>
@@ -65,7 +65,17 @@ export default function Page() {
           기업은행 111-111111-11-111 (주)정감
         </div>
       </div>
-      <div className="w-full px-4 pt-4 mb-5">
+      <div className="flex px-4 pb-6  2xl:hidden">
+
+      <Button
+          size={"lg"}
+          variant={"muted"}
+          className=" w-full rounded-xl py-6 bg-[#ADADAD] text-white hover:text-primary-foreground bg-primary/90"
+          >
+          다음
+        </Button>
+          </div>
+      <footer className="absolute bottom-0 w-full px-4 pt-4 mb-5 hidden 2xl:flex">
         <Button
           size={"lg"}
           variant={"muted"}
@@ -73,7 +83,7 @@ export default function Page() {
         >
           다음
         </Button>
-      </div>
-    </div>
+      </footer>
+    </ScrollArea>
   );
 }

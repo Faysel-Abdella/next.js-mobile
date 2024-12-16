@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/ui/icons";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="relative py-6 flex flex-col justify-between items-center h-full gap-1">
+    <ScrollArea className="relative py-6 flex flex-col justify-between items-center h-full gap-1">
       <nav className="w-full flex flex-col ">
         <div className="w-full px-4 mx-auto flex justify-between items-center ">
           <Link href={".."} className="flex items-center gap-4">
@@ -44,11 +45,18 @@ export default function Page() {
           </div>
         ))}
       </div>
-      <div className="w-full px-4 mx-auto">
+      
+      <div className="w-full xl:hidden px-4 mx-auto">
         <Button size={"lg"} className="w-full rounded-lg py-6">
           사진 등록
         </Button>
       </div>
-    </div>
+
+      <footer className="absolute bottom-0 hidden py-5 xl:block w-full px-4 mx-auto">
+        <Button size={"lg"} className="w-full rounded-lg py-6">
+          사진 등록
+        </Button>
+      </footer>
+    </ScrollArea>
   );
 }

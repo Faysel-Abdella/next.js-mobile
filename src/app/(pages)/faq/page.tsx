@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 export default function Page() {
   return (
@@ -21,6 +22,7 @@ export default function Page() {
         </div>
         <Separator />
       </nav>
+      <ScrollArea className="w-full">
       <div className="w-full h-full pt-4 px-5 space-y-2.5 flex flex-col text-[#4D4D4D]">
         <Accordion type="single" collapsible className="w-full space-y-2.5 h-fit">
           
@@ -76,6 +78,7 @@ export default function Page() {
          
         </Accordion>
       </div>
+      </ScrollArea>
     </div>
   );
 }

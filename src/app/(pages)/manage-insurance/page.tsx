@@ -62,10 +62,10 @@ export default function Page() {
           </div>
         </div>
         <ScrollBar className="w-0.5" />
-      </ScrollArea>
       <div className="w-full px-4 pt-2">
         <Button className="w-full py-7 rounded-2xl">확인</Button>
       </div>
+      </ScrollArea>
     </div>
   );
 }
