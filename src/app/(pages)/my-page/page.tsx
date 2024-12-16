@@ -1,12 +1,26 @@
+"use client";
+
 import { Icons } from "@/components/ui/icons";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  CustomAlert,
+  CustomAlertTrigger,
+  CustomAlertContent,
+  CustomAlertCancel,
+} from "@/components/custom-alert";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 
 export default function Page() {
+  const [selectedButton, setSelectedButton] = useState(0);
+  const [selectedAlert, setSelectedAlert] = useState("main"); // Tracks which alert to show
+
   return (
-    <div className="flex flex-col h-screen bg-white">
+    <ScrollArea className="flex flex-wrap -mt-1 flex-col text-[#4D4D4D] h-screen bg-white">
       <nav className="py-6 px-4">
         <div className="w-full mx-auto flex justify-between items-center">
           <Link href={".."} className="flex items-center gap-4">
@@ -16,67 +30,77 @@ export default function Page() {
         </div>
       </nav>
       <Separator />
-      <ScrollArea className="flex-1">
-        <div className="space-y-4 p-5 text-[#4D4D4D]">
-          <p className="text-lg">
-            <span className="font-semibold">홍길동</span> 님 안녕하세요!
-          </p>
-          <div className="flex bg-[#FFF8F5] rounded-xl items-center justify-center gap-11 p-6">
-            <div className="flex flex-col items-center justify-center gap-1">
-              <div className="flex gap-1 items-center text-[16px] font-light">
-                <Image
-                  alt="icon"
-                  src="/images/rounded-letter-p.svg"
-                  width={20}
-                  height={20}
-                  className="size-5"
-                />
-                포인트
+      <p className="text-lg px-4 pt-4">
+        <span className="font-semibold">홍길동</span> 님 안녕하세요!
+      </p>
+      {/* Other content */}
+      <CustomAlert>
+        {selectedAlert === "main" && (
+          <>
+            <CustomAlertTrigger>
+              <p className="text-md px-5 text-[#4D4D4D]">소셜 계정 연동</p>
+            </CustomAlertTrigger>
+            <CustomAlertContent className="max-w-xs flex flex-col justify-center gap-7 items-center w-full">
+              <p className="text-center text-black">연동 방법 선택</p>
+              <div className="flex items-center gap-5">
+                {/* Buttons to select social methods */}
+                {[1, 2, 3].map((id) => (
+                  <button
+                    key={id}
+                    onClick={() => setSelectedButton(id)}
+                    className={cn(
+                      "px-0 bg-transparent rounded-full relative",
+                      selectedButton === id && "border-4 border-primary"
+                    )}
+                  >
+                    <Image
+                      src={`/images/media-${String.fromCharCode(96 + id)}.svg`}
+                      alt={`media-${id}`}
+                      width={60}
+                      height={60}
+                      className="size-[60px] self-center"
+                    />
+                  </button>
+                ))}
               </div>
-              <p className="font-medium text-primary text-xl">5,000P</p>
-            </div>
-            <span className="h-full w-[1px] bg-white"></span>
-            <div className="flex flex-col items-center justify-center gap-1">
-              <div className="flex gap-1 items-center text-[16px] font-light">
-                <Image
-                  alt="icon"
-                  src="/images/star-mass.svg"
-                  width={20}
-                  height={20}
-                  className="w-6"
-                />
-                응모권
+              <div className="flex mt-3 justify-center space-x-2.5 w-full">
+                <CustomAlertCancel className="bg-primary/10 text-primary w-full font-medium">
+                  취소
+                </CustomAlertCancel>
+                <Button
+                  className="w-full bg-primary text-white font-medium"
+                  onClick={() => setSelectedAlert("secondary")}
+                >
+                  확인
+                </Button>
               </div>
-              <p className="font-medium text-primary text-xl">4장</p>
-            </div>
-          </div>
-          <div className="flex flex-col space-y-5 font-light">
-            <p className="text-md">구매내역</p>
-            <p className="text-md">내 보험 관리</p>
-            <p className="text-md">소셜 계정 연동</p>
-            <p className="text-md">알림 설정</p>
-          </div>
-          <Separator />
-          <div className="flex flex-col space-y-5 font-light">
-            <p className="text-md">공지사항</p>
-            <p className="text-md">FAQ</p>
-            <p className="text-md">1:1 문의</p>
-          </div>
-          <Separator />
-          <div className="flex flex-col space-y-5 font-light">
-            <p className="text-md">이용약관</p>
-            <p className="text-md">개인정보 처리방침</p>
-          </div>
-        </div>
-      </ScrollArea>
-      {/* <Separator /> */}
-      <footer className="py-6 px-4 ">
-        <div className="flex justify-center items-center space-x-6 text-[13px] text-[#ADADAD]">
-          <p>로그아웃</p>
-          <p>회원 탈퇴</p>
-        </div>
-      </footer>
-    </div>
+            </CustomAlertContent>
+          </>
+        )}
+      </CustomAlert>
+
+      {/* Secondary Alert */}
+      <CustomAlert>
+        {selectedAlert === "secondary" && (
+          <>
+            <CustomAlertTrigger>
+              {/* Hidden trigger */}
+              <span className="hidden"></span>
+            </CustomAlertTrigger>
+            <CustomAlertContent className="max-w-xs flex flex-col justify-center gap-7 items-center w-full">
+              <p className="text-center text-black">새로운 알림: 연동 성공!</p>
+              <div className="flex mt-3 justify-center space-x-2.5 w-full">
+                <CustomAlertCancel
+                  onClick={() => setSelectedAlert("main")}
+                  className="bg-primary/10 text-primary w-full font-medium"
+                >
+                  확인
+                </CustomAlertCancel>
+              </div>
+            </CustomAlertContent>
+          </>
+        )}
+      </CustomAlert>
+    </ScrollArea>
   );
 }
-
