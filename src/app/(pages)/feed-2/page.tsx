@@ -84,7 +84,7 @@ export default function Page() {
     ]
     return (
         <div className='relative py-6 flex flex-col justify-start items-center h-full'>
-            <nav className='w-full flex flex-col gap-4 pb-4'>
+            <nav className='w-full flex flex-col gap-4 pb-4 border-b-2'>
                 <div className='w-full px-4 mx-auto flex justify-between items-center '>
                     <Link href={".."} className='flex items-center gap-4'>
                         <Icons.arrowLeft className='size-5' />
@@ -95,7 +95,7 @@ export default function Page() {
                 </div>
             </nav>
             <ScrollArea className='h-full'>
-                <Carousel className="w-full bg-[#E2E2E2]">
+                {/* <Carousel className="w-full bg-[#E2E2E2]">
                     <CarouselContent className='bg-[#E2E2E2] '>
                         {Array.from({ length: 6 }).map((_, index) => (
                             <CarouselItem key={index} className='relative'>
@@ -106,76 +106,39 @@ export default function Page() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                </Carousel>
-                <div className='w-full pt-4 space-y-4 gap-2'>
-                    <div className='flex flex-col px-4 w-full'>
-                        <div className='text-xl'>브리지스톤 B2드라이버</div>
-                        <div className='text-primary text-sm line-through'>정상가1,066,660 원</div>
+                </Carousel> */}
+                <div className='bg-[#F5F5F5] w-full flex justify-center items-center aspect-video'>
+                                    <Image src={'/images/blome.png'} width={150} height={100} alt='product-thumbnail' className='mt-5' />
+                                </div>
+                
+                <div className="flex flex-col items-start gap-2.5 p-5">
+                    <div className="flex items-center gap-2 w-full text-[10px] font-light">
+                      <p className=" bg-[#3B90F4]/10 text-[#3B90F4] w-fit py-0.5 px-1 rounded-md">
+                      참여 가능
+                      </p>
+                      <span className=" text-muted-foreground">
+                      41,533명이 참여했어요 
+                      </span>
                     </div>
-                    <div className='flex flex-col px-4 w-full'>
-                        <div className='text-muted-foreground text-[12px]'>응모가능 가격</div>
-                        <div className='text-primary text-xl'>40,000 ~ 90,000 원</div>
+
+                    <div className="flex flex-col gap-2">
+                      <p className="font-medium">브리지스톤 B2 드라이버</p>
+                      <span className="text-[#8268FD] font-light text-[13px]">
+                        정상가 1,066,660원
+                      </span>
                     </div>
-                    <div className='flex px-4 w-ful items-center'>
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className='size-6'>
-                            <g clipPath="url(#clip0_1332_55531)">
-                                <path d="M11.8172 4.08066C11.8172 3.24316 11.1297 2.55566 10.2922 2.55566H3.23594C2.39844 2.55566 1.71094 3.24316 1.71094 4.08066V5.69316H11.8172V4.08066Z" fill="black" />
-                                <path d="M1.71094 5.68652V11.1365C1.71094 11.974 2.39844 12.6615 3.23594 12.6615H10.2922C11.1297 12.6615 11.8172 11.974 11.8172 11.1365V5.68652H1.71094Z" fill="#E6ECEB" />
-                                <path d="M4.5 6.39355H3.25625C3.09747 6.39355 2.96875 6.52227 2.96875 6.68105V7.92481C2.96875 8.08359 3.09747 8.21231 3.25625 8.21231H4.5C4.65878 8.21231 4.7875 8.08359 4.7875 7.92481V6.68105C4.7875 6.52227 4.65878 6.39355 4.5 6.39355Z" fill="black" />
-                                <path d="M7.375 6.39355H6.13125C5.97247 6.39355 5.84375 6.52227 5.84375 6.68105V7.92481C5.84375 8.08359 5.97247 8.21231 6.13125 8.21231H7.375C7.53378 8.21231 7.6625 8.08359 7.6625 7.92481V6.68105C7.6625 6.52227 7.53378 6.39355 7.375 6.39355Z" fill="black" />
-                                <path d="M10.2422 6.39355H8.99844C8.83966 6.39355 8.71094 6.52227 8.71094 6.68105V7.92481C8.71094 8.08359 8.83966 8.21231 8.99844 8.21231H10.2422C10.401 8.21231 10.5297 8.08359 10.5297 7.92481V6.68105C10.5297 6.52227 10.401 6.39355 10.2422 6.39355Z" fill="black" />
-                                <path d="M4.5 9.47461H3.25625C3.09747 9.47461 2.96875 9.60333 2.96875 9.76211V11.0059C2.96875 11.1646 3.09747 11.2934 3.25625 11.2934H4.5C4.65878 11.2934 4.7875 11.1646 4.7875 11.0059V9.76211C4.7875 9.60333 4.65878 9.47461 4.5 9.47461Z" fill="black" />
-                                <path d="M7.375 9.47461H6.13125C5.97247 9.47461 5.84375 9.60333 5.84375 9.76211V11.0059C5.84375 11.1646 5.97247 11.2934 6.13125 11.2934H7.375C7.53378 11.2934 7.6625 11.1646 7.6625 11.0059V9.76211C7.6625 9.60333 7.53378 9.47461 7.375 9.47461Z" fill="black" />
-                                <path d="M10.8734 14.1131C9.39219 14.1131 8.17969 12.9068 8.17969 11.4193C8.17969 9.93184 9.38594 8.72559 10.8734 8.72559C12.3609 8.72559 13.5672 9.93184 13.5672 11.4193C13.5672 12.9068 12.3609 14.1131 10.8734 14.1131Z" fill="black" />
-                                <path d="M10.875 9.00644C12.2063 9.00644 13.2875 10.0877 13.2875 11.4189C13.2875 12.7502 12.2063 13.8314 10.875 13.8314C9.54375 13.8314 8.4625 12.7502 8.4625 11.4189C8.4625 10.0877 9.54375 9.00644 10.875 9.00644ZM10.875 8.4502C9.2375 8.4502 7.90625 9.78145 7.90625 11.4189C7.90625 13.0564 9.2375 14.3877 10.875 14.3877C12.5125 14.3877 13.8438 13.0564 13.8438 11.4189C13.8438 9.78145 12.5125 8.4502 10.875 8.4502Z" fill="white" />
-                                <path d="M10.875 10.1562V11.4188H11.8938" fill="black" />
-                                <path d="M10.875 10.1562V11.4188H11.8938" stroke="white" strokeWidth="0.85" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M4.35938 1.7998V3.16855" stroke="#E6ECEB" strokeWidth="1.89" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M9.16406 1.7998V3.16855" stroke="#E6ECEB" strokeWidth="1.89" strokeLinecap="round" strokeLinejoin="round" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_1332_55531">
-                                    <rect width="15" height="15" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <div className=''>
-                            <span>2일 남음</span>
-                            <span className='text-muted-foreground text-sm'>2024년 7월 31일(수)까지</span>
-                        </div>
+
+                    <div className="flex border-t justify-between w-full py-2">
+                      <p className="font-light text-[13px] text[#ADADAD]">
+                        응모 가능 가격
+                      </p>
+                      <p className="font-medium text[#4D4D4D]">
+                        40,000 ~ 90,000 원
+                      </p>
                     </div>
-                    <div className='flex px-4 w-full items-center gap-2'>
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" className='size-7'>
-                            <g clipPath="url(#clip0_1332_55553)">
-                                <path d="M3.86719 6.6748C4.69561 6.6748 5.36719 6.00323 5.36719 5.1748C5.36719 4.34638 4.69561 3.6748 3.86719 3.6748C3.03876 3.6748 2.36719 4.34638 2.36719 5.1748C2.36719 6.00323 3.03876 6.6748 3.86719 6.6748Z" fill="#E6ECEB" />
-                                <path d="M1.90321 9.92441C1.44696 9.92441 1.13446 9.46191 1.29071 9.03691C1.67197 8.02441 2.67822 7.24316 3.86572 7.24316C5.05322 7.24316 6.05947 8.02441 6.44072 9.03691C6.60322 9.46816 6.29071 9.92441 5.82821 9.92441H1.90321Z" fill="#E6ECEB" />
-                                <path d="M11.125 6.6748C11.9534 6.6748 12.625 6.00323 12.625 5.1748C12.625 4.34638 11.9534 3.6748 11.125 3.6748C10.2966 3.6748 9.625 4.34638 9.625 5.1748C9.625 6.00323 10.2966 6.6748 11.125 6.6748Z" fill="#E6ECEB" />
-                                <path d="M9.16884 9.92441C8.71259 9.92441 8.40009 9.46191 8.55634 9.03691C8.93759 8.02441 9.94384 7.24316 11.1313 7.24316C12.3188 7.24316 13.3251 8.02441 13.7063 9.03691C13.8688 9.46816 13.5563 9.92441 13.0938 9.92441H9.16259H9.16884Z" fill="#E6ECEB" />
-                                <path d="M7.4875 7.5375C8.44709 7.5375 9.225 6.75959 9.225 5.8C9.225 4.84041 8.44709 4.0625 7.4875 4.0625C6.52791 4.0625 5.75 4.84041 5.75 5.8C5.75 6.75959 6.52791 7.5375 7.4875 7.5375Z" fill="black" />
-                                <path d="M5.21414 11.5994C4.87664 11.5994 4.55789 11.4307 4.36414 11.1557C4.17039 10.8744 4.12664 10.5119 4.24539 10.1932C4.75164 8.83691 6.05789 7.93066 7.50164 7.93066C8.94539 7.93066 10.2516 8.84316 10.7579 10.1932C10.8766 10.5182 10.8329 10.8744 10.6391 11.1557C10.4454 11.4369 10.1266 11.5994 9.78914 11.5994H5.22664H5.21414Z" fill="black" />
-                                <path d="M7.49368 8.20566C8.87493 8.20566 10.0437 9.11191 10.4874 10.2869C10.6749 10.7869 10.3124 11.3182 9.77493 11.3182H5.21243C4.68118 11.3182 4.31868 10.7869 4.49993 10.2869C4.93743 9.11191 6.11243 8.20566 7.49368 8.20566ZM7.49368 7.64941C5.93743 7.64941 4.52493 8.63066 3.98118 10.0932C3.83118 10.4994 3.88743 10.9557 4.13118 11.3119C4.37493 11.6682 4.78118 11.8744 5.21243 11.8744H9.77493C10.2062 11.8744 10.6124 11.6619 10.8562 11.3119C11.1062 10.9557 11.1624 10.4994 11.0062 10.0932C10.4624 8.63066 9.04993 7.64941 7.49368 7.64941Z" fill="white" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_1332_55553">
-                                    <rect width="15" height="15" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                        <div className=''>
-                            1,250명 참여
-                        </div>
-                    </div>
-                </div>
-                <div className='w-full py-2'>
-                    <Separator className='h-1' />
-                    <div className='h-fit flex flex-col w-full'>
-                        <Button variant={'ghost'} className='w-full py-6 justify-between'>
-                            <span> 오픈 알림 받기</span>
-                            <Icons.arrowLeft className='size-5 rotate-180' />
-                        </Button>
-                    </div>
-                    <Separator className='h-1' />
-                </div>
+
+                   
+                  </div>
                 <Image src={'/images/product-bill.png'} width={400} height={1200} alt='product-thumbnail' className='object-cover w-full' />
             </ScrollArea>
             <Drawer>
