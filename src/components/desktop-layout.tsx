@@ -72,7 +72,6 @@ const pageLinks = [
     { name: "contact-us-2", path: "/contact-us-2" },
     { name: "response-pending-details", path: "/response-pending-details" },
     { name: "response-completed-details", path: "/response-completed-details" },
-    { name: "lab", path: "/lab" },
 ]
 
 

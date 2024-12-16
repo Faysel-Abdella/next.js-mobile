@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/ui/icons'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import { Separator } from '@/components/ui/separator'
 import Link from 'next/link'
 
@@ -7,7 +8,7 @@ import Link from 'next/link'
 export default function Page() {
 
     return (
-        <div className='h-full space-y-4 pt-4'>
+        <ScrollArea className='h-full space-y-4 pt-4'>
             <nav className='w-full flex flex-col gap-4'>
                 <div className='w-full px-4 mx-auto flex justify-between items-center '>
                     <Link href={".."} className='flex items-center gap-4'>
@@ -45,7 +46,7 @@ export default function Page() {
                 <div>안내 문구를 입력해주세요</div>
                 <div>안내 문구를 입력해주세요</div>
             </div>
-        </div>
+        </ScrollArea>
     )
 }
 
