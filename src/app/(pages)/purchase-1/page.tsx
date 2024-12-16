@@ -93,6 +93,8 @@ export default function Page() {
                 <li>매장 방문 주문 시에만 사용 가능 합니다.</li>
               </ol>
             </div>
+          
+          
           </div>
           <Button className="fixed w-full max-w-[354px] max-h-11 bottom-4 mx-4 py-6 text-lg">
             구매하기
@@ -104,7 +106,6 @@ export default function Page() {
           </CustomDrawerTrigger>
           <ScrollBar className="w-0.5" />
         </ScrollArea>
-
         <CustomDrawerContent className="relative px-5 py-8  flex flex-col gap-4 font-medium">
         <div onClick={() => setIsDrawerOpen(false)} className="hover:cursor-pointer absolute top-4 right-5 opacity-35 size-6 bg-transparent text-black border-0">
         <X />

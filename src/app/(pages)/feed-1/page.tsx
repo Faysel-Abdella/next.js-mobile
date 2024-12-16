@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/scrollable-tabs";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent } from "@/components/ui/tabs";
-import { BellDot, BellRing } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,11 +29,6 @@ export default function Page() {
           </Link>
         </div>
       </nav>
-      {/* <div className='flex items-center justify-between'>
-                <div>
-
-                </div>
-            </div> */}
       <div className="w-full h-full pt-4 ">
         <Tabs defaultValue="18" className="">
           <ScrollableTabsList className="bg-[#F5F5F5] py-2 space-x-2 ">
@@ -52,7 +46,6 @@ export default function Page() {
           <TabsContent value={(18).toString()} className="mt-0 py-0">
             <ScrollArea className="h-[calc(100vh-8rem)]">
               <div className="space-y-4 pb-4">
-
                 <div className="relative w-full text-white bg-gradient-to-b from-[#FF6766] to-[#F8954D] flex flex-col p-4 py-6 space-y-5">
                   <Image
                     alt="icon"
@@ -196,17 +189,13 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-
-
               </div>
               <ScrollBar orientation="vertical" />
             </ScrollArea>
           </TabsContent>
           <TabsContent value={(19).toString()}>
-
-          <ScrollArea className="h-[calc(100vh-8rem)]">
+            <ScrollArea className="h-[calc(100vh-8rem)]">
               <div className="space-y-4 pb-4">
-
                 <div className="relative w-full text-white bg-gradient-to-b from-[#FF6766] to-[#F8954D] flex flex-col p-4 py-6 space-y-5">
                   <Image
                     alt="icon"
@@ -262,7 +251,6 @@ export default function Page() {
                 {/* {First Card */}
                 <div className="flex flex-col mx-5 p-5 rounded-xl bg-white shadow-xl backdrop-blur-xl border border-black/5 space-y-5">
                   <div className="flex relative bg-[#F5F5F5] rounded-md ">
-                   
                     <Image
                       src={"/images/blome.png"}
                       width={131}
@@ -274,10 +262,10 @@ export default function Page() {
                   <div className="flex flex-col items-start gap-2.5 ">
                     <div className="flex items-center gap-2 w-full text-[10px] font-light">
                       <p className=" bg-[#3B90F4]/10 text-[#3B90F4] w-fit py-0.5 px-1 rounded-md">
-                      참여 가능
+                        참여 가능
                       </p>
                       <span className=" text-muted-foreground">
-                      41,533명이 참여했어요 
+                        41,533명이 참여했어요
                       </span>
                     </div>
 
@@ -296,15 +284,12 @@ export default function Page() {
                         40,000 ~ 90,000 원
                       </p>
                     </div>
-
-                   
                   </div>
                 </div>
 
                 {/* {Second Card */}
                 <div className="flex flex-col mx-5 p-5 rounded-xl bg-white shadow-xl backdrop-blur-xl border border-black/5 space-y-5">
                   <div className="flex relative bg-[#F5F5F5] rounded-md ">
-                   
                     <Image
                       src={"/images/blome.png"}
                       width={131}
@@ -316,10 +301,10 @@ export default function Page() {
                   <div className="flex flex-col items-start gap-2.5 ">
                     <div className="flex items-center gap-2 w-full text-[10px] font-light">
                       <p className=" bg-[###F5F5F5] text-[#ADADAD] w-fit py-0.5 px-1 rounded-md">
-                      참여 완료
+                        참여 완료
                       </p>
                       <span className=" text-muted-foreground">
-                      41,533명이 참여했어요 
+                        41,533명이 참여했어요
                       </span>
                     </div>
 
@@ -338,22 +323,15 @@ export default function Page() {
                         40,000 ~ 90,000 원
                       </p>
                     </div>
-
-                   
                   </div>
                 </div>
-
-
               </div>
               <ScrollBar orientation="vertical" />
             </ScrollArea>
-
-
           </TabsContent>
           <TabsContent value={(20).toString()}>
-          <ScrollArea className="h-[calc(100vh-8rem)]">
+            <ScrollArea className="h-[calc(100vh-8rem)]">
               <div className="space-y-4 pb-4">
-
                 <div className="relative w-full text-white bg-gradient-to-b from-[#FF6766] to-[#F8954D] flex flex-col p-4 py-6 space-y-5">
                   <Image
                     alt="icon"
@@ -411,7 +389,7 @@ export default function Page() {
                   <div className="flex relative bg-[#F5F5F5] rounded-md ">
                     <div className="absolute flex items-center rounded-lg justify-center w-full h-full bg-black/70">
                       <p className="text-white font-medium">
-                      12월 1일 오픈 예졍
+                        12월 1일 오픈 예졍
                       </p>
                     </div>
                     <Image
@@ -423,7 +401,6 @@ export default function Page() {
                     />
                   </div>
                   <div className="flex flex-col items-start gap-2.5 ">
-                    
                     <div className="flex flex-col gap-2">
                       <p className="font-medium">브리지스톤 B2 드라이버</p>
                       <span className="text-[#8268FD] font-light text-[13px]">
@@ -441,7 +418,13 @@ export default function Page() {
                     </div>
 
                     <Button className="bg-[#FFEFE8] text-primary p-2 w-full flex items-center gap-2.5">
-                      <Image src={"/images/bell-icon.svg"} width={20} height={20} alt="icon" className="size-5" />
+                      <Image
+                        src={"/images/bell-icon.svg"}
+                        width={20}
+                        height={20}
+                        alt="icon"
+                        className="size-5"
+                      />
                       신청 결과 확인하기
                     </Button>
                   </div>
@@ -452,7 +435,7 @@ export default function Page() {
                   <div className="flex relative bg-[#F5F5F5] rounded-md ">
                     <div className="absolute flex items-center rounded-lg justify-center w-full h-full bg-black/70">
                       <p className="text-white font-medium">
-                      12월 1일 오픈 예졍
+                        12월 1일 오픈 예졍
                       </p>
                     </div>
                     <Image
@@ -464,8 +447,6 @@ export default function Page() {
                     />
                   </div>
                   <div className="flex flex-col items-start gap-2.5 ">
-                    
-
                     <div className="flex flex-col gap-2">
                       <p className="font-medium">브리지스톤 B2 드라이버</p>
                       <span className="text-[#8268FD] font-light text-[13px]">
@@ -482,13 +463,17 @@ export default function Page() {
                       </p>
                     </div>
                     <Button className="bg-[#FFEFE8] text-primary p-2 w-full flex items-center gap-2.5">
-                      <Image src={"/images/bell-icon.svg"} width={20} height={20} alt="icon" className="size-5" />
+                      <Image
+                        src={"/images/bell-icon.svg"}
+                        width={20}
+                        height={20}
+                        alt="icon"
+                        className="size-5"
+                      />
                       신청 결과 확인하기
                     </Button>
                   </div>
                 </div>
-
-
               </div>
               <ScrollBar orientation="vertical" />
             </ScrollArea>

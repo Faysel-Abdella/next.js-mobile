@@ -52,7 +52,7 @@ const pageLinks = [
     { name: "moving-image", path: "/moving-image" },
     { name: "feed-1", path: "/feed-1" },
     { name: "feed-2", path: "/feed-2" },
-    { name: "feed-3", path: "/feed-3" },
+    // { name: "feed-3", path: "/feed-3" },
     { name: "my-page", path: "/my-page" },
     { name: "point-history-1", path: "/point-history-1" },
     { name: "point-history-2", path: "/point-history-2" },
