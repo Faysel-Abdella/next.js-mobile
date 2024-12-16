@@ -91,7 +91,7 @@ export default function Page() {
               <p className="text-center text-black">새로운 알림: 연동 성공!</p>
               <div className="flex mt-3 justify-center space-x-2.5 w-full">
                 <CustomAlertCancel
-                  onClick={() => setSelectedAlert("main")}
+                  // onClick={() => setSelectedAlert("main")}
                   className="bg-primary/10 text-primary w-full font-medium"
                 >
                   확인
